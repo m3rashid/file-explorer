@@ -8,9 +8,6 @@ dependencies:
   '@tauri-apps/api':
     specifier: ^1
     version: 1.5.3
-  byte-size:
-    specifier: ^8.1.1
-    version: 8.1.1
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -22,9 +19,6 @@ devDependencies:
   '@tauri-apps/cli':
     specifier: ^1
     version: 1.5.11
-  '@types/byte-size':
-    specifier: ^8.1.2
-    version: 8.1.2
   '@types/react':
     specifier: ^18.2.15
     version: 18.2.64
@@ -749,10 +743,6 @@ packages:
       '@babel/types': 7.24.0
     dev: true
 
-  /@types/byte-size@8.1.2:
-    resolution: {integrity: sha512-jGyVzYu6avI8yuqQCNTZd65tzI8HZrLjKX9sdMqZrGWVlNChu0rf6p368oVEDCYJe5BMx2Ov04tD1wqtgTwGSA==}
-    dev: true
-
   /@types/estree@1.0.5:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
     dev: true
@@ -812,11 +802,6 @@ packages:
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
     dev: true
-
-  /byte-size@8.1.1:
-    resolution: {integrity: sha512-tUkzZWK0M/qdoLEqikxBWe4kumyuwjl3HO6zHTr4yEI23EojPtLYXdG1+AQY7MN0cGyNDvEaJ8wiYQm6P2bPxg==}
-    engines: {node: '>=12.17'}
-    dev: false
 
   /caniuse-lite@1.0.30001596:
     resolution: {integrity: sha512-zpkZ+kEr6We7w63ORkoJ2pOfBwBkY/bJrG/UZ90qNb45Isblu8wzDgevEOrRL1r9dWayHjYiiyCMEXPn4DweGQ==}
