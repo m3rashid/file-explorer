@@ -35,3 +35,10 @@ pub struct Drive {
 pub struct LsblkJsonOutput {
   pub blockdevices: Vec<Drive>,
 }
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct DriveContent {
+  pub name: String,
+  pub is_dir: bool,
+  pub mount_point: String,
+}

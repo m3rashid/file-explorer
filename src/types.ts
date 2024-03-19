@@ -13,3 +13,9 @@ export type Drive = {
   type: Option<string>;
   children: Option<Array<Drive>>;
 };
+
+export type DriveContent = {
+  name: Option<string>;
+  is_dir: boolean;
+  mount_point: Option<string>;
+};

@@ -1,4 +1,5 @@
 mod drive_types;
+use std::fs;
 use std::process::Command;
 
 fn get_usable_drives(output: drive_types::LsblkJsonOutput) -> Vec<drive_types::Drive> {
@@ -25,6 +26,27 @@ fn get_usable_drives(output: drive_types::LsblkJsonOutput) -> Vec<drive_types::D
   }
 
   drives
+}
+
+#[tauri::command]
+pub fn get_directory_contents(dir_path: &str) -> Vec<drive_types::DriveContent> {
+  let mut drive_contents: Vec<drive_types::DriveContent> = Vec::new();
+  match fs::read_dir(dir_path) {
+    Err(_) => drive_contents,
+    Ok(entries) => {
+      for entry in entries {
+        match entry {
+          Err(_) => {}
+          Ok(content) => drive_contents.push(drive_types::DriveContent {
+            name: content.file_name().into_string().unwrap(),
+            is_dir: content.path().is_dir(),
+            mount_point: content.path().to_str().unwrap().to_owned(),
+          }),
+        }
+      }
+      return drive_contents;
+    }
+  }
 }
 
 #[tauri::command]
