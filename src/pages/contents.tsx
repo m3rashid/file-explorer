@@ -23,22 +23,30 @@ function DirectoryContents() {
 
   return (
     <>
-      <button onClick={() => navigate(-1)}>Go Back</button>
+      <div className='p-2 bg-[#7b7b7b69]'>
+        <button onClick={() => navigate(-1)}>Go Back</button>
+      </div>
 
-      <div className='m-0 p-4 max-h-[calc(100vh-24px)] min-h-[calc(100vh-24px)] overflow-y-auto flex flex-wrap bg-[#2f2f2f] gap-4'>
+      <div className='m-0 p-4 overflow-y-auto flex flex-wrap bg-[#2f2f2f] gap-4'>
         {driveContents.map((driveFile) => {
+          const displayName = driveFile.name?.substring(0, 10) || '';
           return (
             <div
               key={driveFile.name}
-              onClick={() => navigate('/app' + driveFile.mount_point || '')}
-              className={`cursor-pointer rounded-md p-1 flex flex-col items-center justify-center w-32 'bg-[#7b7b7b69]`}
+              onClick={() => {
+                if (!driveFile.is_dir) return;
+                navigate('/app' + driveFile.mount_point || '');
+              }}
+              className='cursor-pointer rounded-md p-1 flex flex-col items-center justify-center w-32 h-32 bg-[#7b7b7b69]'
             >
               <img
-                width={100}
-                height={100}
+                width={driveFile.is_dir ? 100 : 60}
+                height={driveFile.is_dir ? 100 : 60}
                 src={driveFile.is_dir ? '/folder.ico' : '/file.ico'}
               />
-              <p className='break-all text-center'>{driveFile.name}</p>
+              <p className='break-all text-center'>
+                {displayName + (displayName !== driveFile.name ? '...' : '')}
+              </p>
             </div>
           );
         })}

@@ -8,7 +8,12 @@
   </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root" class="bg-[#2f2f2f] h-screen"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      document.addEventListener('contextmenu', (event) =>
+        event.preventDefault()
+      );
+    </script>
   </body>
 </html>
