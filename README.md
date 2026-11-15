@@ -1,16 +1,26 @@
-# File Explorer
+<div align="center">
 
-Desktop file manager built with Tauri + React. Browse, manage, and preview files locally.
+# 📁 File Explorer
 
-## Demo
+**Desktop file manager built with Tauri + React.**
+
+[![Tauri](https://img.shields.io/badge/Tauri-1.x-FFC131?logo=tauri&logoColor=black)](https://tauri.app)
+[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)](https://react.dev)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+</div>
+
+---
+
+## 🎬 Demo
 
 [file-manager.webm](https://github.com/m3rashid/file-explorer/assets/64685317/b99b0a13-a955-4607-b0b0-7d2260e80746)
 
-## Tech
+## 🛠 Tech
 
-Tauri · React · TypeScript · Tailwind · Vite
+`Tauri` · `React` · `TypeScript` · `Tailwind` · `Vite`
 
-## Quick start
+## 📦 Quick start
 
 ```bash
 git clone https://github.com/m3rashid/file-explorer.git
@@ -19,6 +29,6 @@ pnpm install
 pnpm tauri dev
 ```
 
-## License
+## 📄 License
 
 MIT
