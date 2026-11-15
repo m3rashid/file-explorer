@@ -1,3 +1,18 @@
-### File Explorer
+# File Explorer
 
-[file-manager.webm](https://github.com/m3rashid/file-explorer/assets/64685317/b99b0a13-a955-4607-b0b0-7d2260e80746)
+Desktop file manager built with Tauri + React.
+
+## Tech
+
+Tauri · React · TypeScript · Tailwind · Vite
+
+## Quick start
+
+```bash
+pnpm install
+pnpm tauri dev
+```
+
+## License
+
+MIT
